@@ -1,0 +1,29 @@
+name: App python teste #nome do teste
+
+# trigger (gatilho)
+on: 
+  push: # o que vai ativar esse gatilho
+    branches: ["main"] # e qual a brench que vai gerar o gatilho (["*"] todas as brenches)
+
+# define o que ele vai verificar
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # passos a serem executados ex:(rodar o requerements, rodar o python, rodar o banco)
+    steps:
+        - uses: actions/checkout@v2 #entra na pasta do meu projeto
+        
+        - name: Configurar ambiente Python
+          uses: actions/setup-python@v2
+          with:
+            python-version: 3.12.2
+        
+        - name: Baixando app.py e requerements.txt
+          run: |
+            pip install app.py
+            pip install requerements.txt 
+        
+        - name: Baixando app-teste.py
+          run: |
+            pip install app-teste.py
