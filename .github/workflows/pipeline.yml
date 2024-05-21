@@ -27,3 +27,4 @@ jobs:
         - name: Baixando app-teste.py
           run: |
             python -m unittest app-test.py
+            python -m unittest app-teste.py
