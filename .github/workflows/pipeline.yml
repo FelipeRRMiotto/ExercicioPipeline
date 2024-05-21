@@ -21,9 +21,9 @@ jobs:
         
         - name: Baixando app.py e requerements.txt
           run: |
-            pip install app.py
+            python3 -m pip install coverage
             pip install requerements.txt 
         
         - name: Baixando app-teste.py
           run: |
-            pip install app-teste.py
+            python -m unittest testes.py
