@@ -6,7 +6,7 @@ app = Flask(__name__)
 def devops():
     return '<center><h1><font color=red>Germinare Tech, EU AMO DEVOPS</center>'
 
-@app.route('/')
+@app.route('/salah')
 def salah():
     return '<center><h1><font color=red>Sala 2H, AMOA DEVOPS</center>'
 
