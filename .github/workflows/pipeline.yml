@@ -26,4 +26,7 @@ jobs:
         
       - name: Executar testes
         run: |
-          python -m unittest app-teste.py # Certifique-se de que 'app-teste.py' está no diretório correto
+          coverage run -m app-teste.py
+          
+      - name: Resultados
+        run: coverage report
