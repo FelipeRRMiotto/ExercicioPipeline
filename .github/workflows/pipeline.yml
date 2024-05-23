@@ -26,7 +26,7 @@ jobs:
         
       - name: Executar testes
         run: |
-          coverage run -m app_test.py
+          coverage run -m app_test
           
       - name: Resultados
         run: coverage report
