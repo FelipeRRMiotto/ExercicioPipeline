@@ -1,8 +1,10 @@
-FROM python
+FROM python 
 
 WORKDIR /app
 
-COPY . .
+COPY app.py .
+COPY app_test.py .
+COPY requirements.txt .
 
 RUN pip install -r requirements.txt
 
