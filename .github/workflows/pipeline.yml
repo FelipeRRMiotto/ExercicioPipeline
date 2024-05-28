@@ -31,9 +31,8 @@ jobs:
       - name: Resultados
         run: coverage report
 
-    
-      - uses: actions/docker-build-push@v6
-        name: Build & push Docker image
+      - name: Build & push Docker image
+        uses: docker/build-push-action@v3
         with:
           image: henriquelucareli/projeto_desafio
           tags: latest
@@ -41,3 +40,4 @@ jobs:
           dockerfile: dockerfile
           username: ${{ secrets.DOCKER_USERNAME }}
           password: ${{ secrets.DOCKER_PASSWORD }}
+#Fim 
