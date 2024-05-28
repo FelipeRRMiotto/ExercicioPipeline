@@ -4,9 +4,9 @@ WORKDIR /app
 
 COPY app.py .
 COPY app_test.py .
-COPY requirements.txt .
+COPY requerements.txt .
 
-RUN pip install -r requirements.txt
+RUN pip install -r requerements.txt
 
 EXPOSE 5000
 
