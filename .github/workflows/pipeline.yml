@@ -34,6 +34,8 @@ jobs:
       - name: Build & push Docker image
         uses: docker/build-push-action@v3
         with:
+          context: .
+          push: true
           image: henriquelucareli/projeto_desafio
           tags: latest
           registry: docker.io
