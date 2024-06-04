@@ -11,6 +11,7 @@ valor_dolar = round(float((driver.find_element(By.CLASS_NAME,"fxKbKc").text).rep
 data_cotacao = date.today()
 hora_cotacao = ((((driver.find_element(By.CLASS_NAME,"ygUjEc").text).split(", "))[1]).split(" · "))[0]
 
+hora_cotacao = hora_cotacao.split(" ")[0]
 hora_cotacao_temp = (hora_cotacao.split(":"))[0]
 if hora_cotacao_temp == "3":
     hora_cotacao_temp = "12"
