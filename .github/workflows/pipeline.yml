@@ -38,8 +38,8 @@ jobs:
         run: docker info
 
       - name: Build Docker image
-        run: docker build -t henriquelucareli/projeto_desafio:latest .
+        run: docker build -t felipemiotto/exercicio_pipeline:latest .
 
       - name: Push Docker image
-        run: docker push henriquelucareli/projeto_desafio:latest
+        run: docker push felipemiotto/exercicio_pipeline:latest
 #Fim 
