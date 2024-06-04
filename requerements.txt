@@ -1,3 +1,4 @@
 selenium
 datetime
 psycopg2
+coverage
