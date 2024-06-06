@@ -12,12 +12,18 @@ data_cotacao = date.today()
 hora_cotacao = ((((driver.find_element(By.CLASS_NAME,"ygUjEc").text).split(", "))[1]).split(" · "))[0]
 
 hora_cotacao_temp = (hora_cotacao.split(":"))[0]
+
+if "PM" in hora_cotacao or "pm" in hora_cotacao:
+    hora_cotacao_temp = str(int(hora_cotacao_temp) + 12)
+
 if hora_cotacao_temp == "3":
     hora_cotacao_temp = "12"
 elif int(hora_cotacao_temp) < 3:
     hora_cotacao_temp = str((int(hora_cotacao_temp) - 3) + 12)
 else:
     hora_cotacao_temp = str(int(hora_cotacao_temp)-3)
+
+
 hora_cotacao = hora_cotacao_temp+":"+(hora_cotacao.split(":"))[1]+":"+(((hora_cotacao.split(":"))[2]).split(" "))[0]
 hora_cotacao = hora_cotacao.rstrip("PAMpam").strip()
 
