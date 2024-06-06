@@ -13,7 +13,9 @@ hora_cotacao = ((((driver.find_element(By.CLASS_NAME,"ygUjEc").text).split(", ")
 
 hora_cotacao_temp = (hora_cotacao.split(":"))[0]
 
-if "PM" in hora_cotacao or "pm" in hora_cotacao:
+print(hora_cotacao)
+
+if (hora_cotacao[9]).upper() == "P":
     hora_cotacao_temp = str(int(hora_cotacao_temp) + 12)
 
 if hora_cotacao_temp == "3":
